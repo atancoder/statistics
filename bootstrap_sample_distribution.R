@@ -1,17 +1,19 @@
-# Let's create a sample distribution plot
+# Let's create a sample distribution plot via bootstrapping
 # Source
 data(ChickWeight)
 weights <- ChickWeight$weight
 
 n <- 50
-num_experiments <- 10000
+num_experiments <- 1000
 
+single_experiment <- sample(weights, n, replace = TRUE)
+
+# simulate via bootstrap
 experiment_results <- replicate(
-    num_experiments, sample(weights, n, replace = TRUE)
+    num_experiments, sample(single_experiment, n, replace = TRUE)
 )
 
 means <- apply(experiment_results, 2, mean)
-sprintf("Means are [%s]", toString(means))
 
 # Generate a sampling distribution histogram of the means
 hist(
