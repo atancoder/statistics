@@ -1,4 +1,7 @@
 # Let's create a sample distribution plot via simulation
+# Monte Carlo is the idea of simulating the experiment
+# many times.
+
 # Source
 data(ChickWeight)
 weights <- ChickWeight$weight

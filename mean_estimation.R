@@ -1,4 +1,5 @@
-# Goal: Estimate the avg weight of chicks
+# Goal: Estimate the avg weight of chicks by sampling
+# Give a confidence range
 # Population: ChickWeight dataset
 
 library("dplyr")

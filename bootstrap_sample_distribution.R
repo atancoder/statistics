@@ -1,4 +1,9 @@
 # Let's create a sample distribution plot via bootstrapping
+# bootstrapping is the idea of repeatedly sampling from your dataset
+# with replacement. The difference between monte carlo is that
+# we are sampling from a subset of the population (vs sampling
+# from the entire population)
+
 # Source
 data(ChickWeight)
 weights <- ChickWeight$weight
